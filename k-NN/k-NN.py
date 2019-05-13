@@ -40,7 +40,7 @@ def train():
 
     return k, x_train, y_train
 
-def predict(k, x_train, y_train):
+def predict(k, x_train, y_train, x_test):
     model = neighbors.KNeighborsRegressor(n_neighbors=k)
     model.fit(x_train,y_train)
     pred = model.predict(x_test)
